@@ -1,12 +1,12 @@
 # Enterprise API & Database Quality Assurance Suite
 
-[![API Integration Tests](https://github.com/aishwaryaas/api-testing-postman-python-sql/actions/workflows/api-ci.yml/badge.svg)](https://github.com/aishwaryaas/api-testing-postman-python-sql/actions)
+[![API Integration Tests](https://github.com/aishwaryyaa12/api-testing-postman-python-sql/actions/workflows/api-ci.yml/badge.svg)](https://github.com/aishwaryyaa12/api-testing-postman-python-sql/actions)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![Postman/Newman](https://img.shields.io/badge/Postman-Newman-orange.svg)](https://www.postman.com/)
 
 A comprehensive backend testing and data validation suite combining **Postman / Newman CLI**, **Python (requests)**, and **SQL / PostgreSQL data verification**.
 
-Developed by **[Aishwarya Shanmugam](https://linkedin.com/in/aishwaryaas)** (QA Engineer).
+Developed by **[Aishwarya Shanmugam](https://linkedin.com/in/aishwaryyaa12)** (QA Engineer).
 
 ---
 
@@ -38,4 +38,4 @@ python scripts/verify_db_api.py
 ## 👩‍💻 Author
 **Aishwarya Shanmugam** — QA Engineer | Test Automation Specialist  
 📍 Steinenbronn (Stuttgart Region), Germany  
-🔗 [LinkedIn Profile](https://linkedin.com/in/aishwaryaas)
+🔗 [LinkedIn Profile](https://linkedin.com/in/aishwaryyaa12)
