@@ -1,0 +1,46 @@
+name: API Integration & Data Integrity CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Python & Database Reconciliation Checks
+        run: |
+          python scripts/verify_db_api.py
+
+      - name: Set up Node.js for Newman
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Newman & Reporters
+        run: npm install -g newman newman-reporter-htmlextra
+
+      - name: Execute Postman Collection via Newman
+        run: |
+          newman run postman/ecommerce_api_collection.json -e postman/env_staging.json -r cli,htmlextra --reporter-htmlextra-export report.html
+
+      - name: Upload Test Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-test-report
+          path: report.html

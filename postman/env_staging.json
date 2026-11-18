@@ -1,0 +1,19 @@
+{
+  "id": "e4b8a2c1-9d3f-4a5e-b7c8-1a2b3c4d5e6f",
+  "name": "Staging Environment",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "https://dummyjson.com",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "apiKey",
+      "value": "staging_test_token_xyz987",
+      "type": "secret",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}
